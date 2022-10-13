@@ -14,10 +14,10 @@ class Simpson13Compuesto:
         for i in range(1, self.numero_puntos):
             x_siguiente = self.x_inicio + i*self.h
             if i%2 == 0: #PAR
-                sumatoria_par += self.funcion(x_siguiente) + self.funcion(self.x_fin) #Sumatoria descrita en el board
+                sumatoria_par += self.funcion(x_siguiente) + self.funcion(self.x_fin) #Sumatoria descrita la formula
             else:
                 sumatoria_impar += self.funcion(x_siguiente) #Sumatoria descrita en el board
-        area = (self.h/3)*(self.funcion(self.x_inicio) + 4*sumatoria_impar + 2*sumatoria_par) # Esta parte es la formula que aparece en el board
+        area = (self.h/3)*(self.funcion(self.x_inicio) + 4*sumatoria_impar + 2*sumatoria_par)
         return area
 
 #Acá puedo poner cualquiern función que vaya a integrar.
